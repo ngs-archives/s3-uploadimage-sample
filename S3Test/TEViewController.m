@@ -40,7 +40,7 @@
     [s3 uploadImage:image
       thumbnailSize:CGSizeMake(100, 100)
        withFilename:filename
-           inBucket:@"littleapps"
+           inBucket:kAWSBucket
             success:^(S3Response *response, NSURL *URL, NSURL *thumbnailURL) {
               NSLog(@"URL: %@\nThumbnail URL: %@", URL.absoluteString, thumbnailURL.absoluteString);
             }
