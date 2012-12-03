@@ -2,5 +2,5 @@
 
 1. Download the latest SDK archive from [http://aws.amazon.com/sdkforios/](http://aws.amazon.com/sdkforios/).
 2. Extract the zipball
-3. Move `AWSiOSSDK.framework` to `S3Test` from the extract folder.
+3. Move `AWSiOSSDK.framework` to `S3Test` from the extracted folder.
 4. Copy `S3Credentials.h.sample` to `S3Credentials.h` and replace constants with key/secret copied from [https://portal.aws.amazon.com/gp/aws/securityCredentials](https://portal.aws.amazon.com/gp/aws/securityCredentials).
