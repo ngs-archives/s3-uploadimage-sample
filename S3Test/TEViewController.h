@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TEViewController : UIViewController
+@interface TEViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+- (IBAction)openCamera:(id)sender;
 
 @end

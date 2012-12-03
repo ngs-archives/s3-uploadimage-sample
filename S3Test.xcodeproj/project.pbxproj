@@ -23,6 +23,9 @@
 		854B2109166CEF8C00C65FAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 854B20E4166CEF8C00C65FAA /* Foundation.framework */; };
 		854B2111166CEF8C00C65FAA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 854B210F166CEF8C00C65FAA /* InfoPlist.strings */; };
 		854B2114166CEF8C00C65FAA /* S3TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 854B2113166CEF8C00C65FAA /* S3TestTests.m */; };
+		85F6BCF3166CF359000DB18C /* AmazonS3Client+uploadImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F6BCF0166CF359000DB18C /* AmazonS3Client+uploadImage.m */; };
+		85F6BCF4166CF359000DB18C /* UIImage+shrinking.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F6BCF2166CF359000DB18C /* UIImage+shrinking.m */; };
+		85F6BCF7166CF39B000DB18C /* AWSiOSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85F6BCF6166CF39B000DB18C /* AWSiOSSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,12 @@
 		854B2110166CEF8C00C65FAA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		854B2112166CEF8C00C65FAA /* S3TestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = S3TestTests.h; sourceTree = "<group>"; };
 		854B2113166CEF8C00C65FAA /* S3TestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = S3TestTests.m; sourceTree = "<group>"; };
+		85F6BCEF166CF359000DB18C /* AmazonS3Client+uploadImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AmazonS3Client+uploadImage.h"; sourceTree = "<group>"; };
+		85F6BCF0166CF359000DB18C /* AmazonS3Client+uploadImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AmazonS3Client+uploadImage.m"; sourceTree = "<group>"; };
+		85F6BCF1166CF359000DB18C /* UIImage+shrinking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+shrinking.h"; sourceTree = "<group>"; };
+		85F6BCF2166CF359000DB18C /* UIImage+shrinking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+shrinking.m"; sourceTree = "<group>"; };
+		85F6BCF6166CF39B000DB18C /* AWSiOSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSiOSSDK.framework; path = S3Test/AWSiOSSDK.framework; sourceTree = "<group>"; };
+		85F6BCF8166CFA14000DB18C /* S3Credentials.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = S3Credentials.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +77,7 @@
 				854B20E3166CEF8C00C65FAA /* UIKit.framework in Frameworks */,
 				854B20E5166CEF8C00C65FAA /* Foundation.framework in Frameworks */,
 				854B20E7166CEF8C00C65FAA /* CoreGraphics.framework in Frameworks */,
+				85F6BCF7166CF39B000DB18C /* AWSiOSSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +116,7 @@
 		854B20E1166CEF8C00C65FAA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				85F6BCF6166CF39B000DB18C /* AWSiOSSDK.framework */,
 				854B20E2166CEF8C00C65FAA /* UIKit.framework */,
 				854B20E4166CEF8C00C65FAA /* Foundation.framework */,
 				854B20E6166CEF8C00C65FAA /* CoreGraphics.framework */,
@@ -117,12 +128,17 @@
 		854B20E8166CEF8C00C65FAA /* S3Test */ = {
 			isa = PBXGroup;
 			children = (
+				85F6BCEF166CF359000DB18C /* AmazonS3Client+uploadImage.h */,
+				85F6BCF0166CF359000DB18C /* AmazonS3Client+uploadImage.m */,
+				85F6BCF1166CF359000DB18C /* UIImage+shrinking.h */,
+				85F6BCF2166CF359000DB18C /* UIImage+shrinking.m */,
 				854B20F1166CEF8C00C65FAA /* TEAppDelegate.h */,
 				854B20F2166CEF8C00C65FAA /* TEAppDelegate.m */,
 				854B20FA166CEF8C00C65FAA /* MainStoryboard.storyboard */,
 				854B20FD166CEF8C00C65FAA /* TEViewController.h */,
 				854B20FE166CEF8C00C65FAA /* TEViewController.m */,
 				854B20E9166CEF8C00C65FAA /* Supporting Files */,
+				85F6BCF8166CFA14000DB18C /* S3Credentials.h */,
 			);
 			path = S3Test;
 			sourceTree = "<group>";
@@ -274,6 +290,8 @@
 				854B20EF166CEF8C00C65FAA /* main.m in Sources */,
 				854B20F3166CEF8C00C65FAA /* TEAppDelegate.m in Sources */,
 				854B20FF166CEF8C00C65FAA /* TEViewController.m in Sources */,
+				85F6BCF3166CF359000DB18C /* AmazonS3Client+uploadImage.m in Sources */,
+				85F6BCF4166CF359000DB18C /* UIImage+shrinking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +394,10 @@
 		854B2118166CEF8C00C65FAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/S3Test\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "S3Test/S3Test-Prefix.pch";
 				INFOPLIST_FILE = "S3Test/S3Test-Info.plist";
@@ -387,6 +409,10 @@
 		854B2119166CEF8C00C65FAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/S3Test\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "S3Test/S3Test-Prefix.pch";
 				INFOPLIST_FILE = "S3Test/S3Test-Info.plist";
@@ -448,6 +474,7 @@
 				854B2119166CEF8C00C65FAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		854B211A166CEF8C00C65FAA /* Build configuration list for PBXNativeTarget "S3TestTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +483,7 @@
 				854B211C166CEF8C00C65FAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

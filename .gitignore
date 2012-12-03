@@ -1,0 +1,5 @@
+.DS_Store
+S3Test/S3Credentials.h
+xcuserdata
+*.swp
+AWSiOSSDK.framework
